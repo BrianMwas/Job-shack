@@ -1,0 +1,67 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+nb-card h2, h4 {
+    font-weight: 200;
+}
+
+nb-card h4 {
+    font-size: 1.3rem;
+}
+
+.rounded {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    background: rgba(128, 128, 128, 0.116);
+}
+
+form {
+    margin: 10px 0;
+
+    input  {
+        margin: 5px 0;
+    }
+}
+
+.my-3 {
+    margin: 15px 0;
+}
+
+
+
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: red;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}

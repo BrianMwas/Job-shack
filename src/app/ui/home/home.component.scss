@@ -1,0 +1,83 @@
+@mixin mq($width, $type) {
+  @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+
+      @if $type == max {
+          $width : $width - 1px;
+      }
+
+      @media only screen and (#{$type}-width: $width) {
+          @content;
+      }
+  }
+}
+
+$breakpoints: (
+    "phone": 400px,
+    "phone-wide": 480px,
+    "phablet": 560px,
+    "tablet-small": 640px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1248px,
+    "desktop-wide": 1440px
+);
+
+nb-card {
+  h4 {
+    line-height: 1rem;
+  }
+}
+
+
+
+.border-b {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(115%);
+    left: 0;
+    width: 30%;
+    height: 2.5px;
+    margin: 0 auto;
+    background: rebeccapurple;
+
+  }
+}
+
+
+.text-center {
+	text-align: center;
+}
+
+.reviewBg {
+	height: 150px;
+	width: 150px;
+	background: url("../../../assets/svg/8.svg") center no-repeat;
+	object-fit: cover;
+	margin: 0 auto;
+}
+
+nb-card-body {
+  padding: 10px;
+
+	@include mq('max','phone') {
+    padding: 10px;
+  }
+
+  @include mq('max','phone-wide') {
+    padding: 10px;
+  }
+
+  @include mq('max','phablet') {
+    padding: 10px;
+	}
+}
+
+
+
+
+

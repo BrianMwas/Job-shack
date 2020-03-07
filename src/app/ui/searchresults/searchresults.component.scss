@@ -1,0 +1,51 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.my-2 {
+  margin: 1em 0;
+}
+
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  margin: auto;
+
+
+  &::before, &::after {
+    content: '';
+    width:100px;
+    height: 100px;
+    display: block;
+    border-radius: 50%;
+  }
+
+
+  &::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 4px;
+    border: solid 3px transparent;
+    border-top-color: white;
+    border-bottom-color: white;
+    animation: spinny 2s cubic-bezier(0.47, 0.15, 0.43, 0.89) infinite;
+  }
+}
+
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

@@ -1,0 +1,46 @@
+
+<div fxLayout="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="50px" class="container">
+	<div>
+		<h2>Feel free to contact us at your convinience</h2>
+	</div>
+	<ul>
+		<li *ngFor="let shopping of shoppingItems$ | async">
+			<p>{{ shopping.item }}</p>
+		</li>
+	</ul>
+
+
+	<!-- <nb-accordion>
+
+
+		<nb-accordion-item>
+			<nb-accordion-item-header>
+				Email
+			</nb-accordion-item-header>
+			<nb-accordion-item-body>
+				info@jobshack.com
+			</nb-accordion-item-body>
+		</nb-accordion-item>
+	</nb-accordion>
+
+	<nb-accordion>
+	  <nb-accordion-item>
+	    <nb-accordion-item-header>
+	      Telephone
+	    </nb-accordion-item-header>
+	    <nb-accordion-item-body>
+	      +254705458976
+	    </nb-accordion-item-body>
+	  </nb-accordion-item>
+	</nb-accordion>
+	<nb-accordion>
+	  <nb-accordion-item>
+	    <nb-accordion-item-header>
+	      Location
+	    </nb-accordion-item-header>
+	    <nb-accordion-item-body>
+	      Nairobi Kenya
+	    </nb-accordion-item-body>
+	  </nb-accordion-item>
+	</nb-accordion> -->
+</div>
