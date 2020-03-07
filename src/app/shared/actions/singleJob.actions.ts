@@ -1,4 +1,5 @@
 import { createAction, props } from '@ngrx/store';
+import { Job } from '../models/job';
 
 
 
@@ -20,3 +21,12 @@ export enum SingleJobActionTypes {
     DELETING_JOB_SUCCESSFULL = '[JOB] Job Deleted Successfully',
     DELETE_JOB_FAILED = '[JOB] Delete JOb Failed'
 }
+
+export const loadJob = createAction(SingleJobActionTypes.LOADING_JOB);
+export const jobLoaded = createAction(SingleJobActionTypes.LOADING_JOB_SUCCESSFUL, props<{ job: Job }>())
+export const loadJobFailed = createAction(SingleJobActionTypes.LOADING_JOB_FAILED, (error_message: 'Sorry Job not found') => ({ payload: { error_message } }));
+
+export const creatingJob = createAction(SingleJobActionTypes.CREATING_JOB);
+export const createdJob = createAction(SingleJobActionTypes.CREATED_JOB_SUCCESSFULLY, props<{ payload: Job }>());
+
+

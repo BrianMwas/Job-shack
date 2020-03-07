@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { JobService } from '../jobs/job.service';
 import { map, tap } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
-import { AppState } from '../shared/models/app.state.model';
+import { AppState } from '../shared/models/states/app.state.model';
 import { AllJobsLoading } from '../shared/actions/joblist.actions';
 
 @Injectable({

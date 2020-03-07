@@ -1,6 +1,6 @@
 import { createReducer, on, Action } from "@ngrx/store";
 import * as JobActions from '../actions/joblist.actions';
-import { Job } from '../models/job';
+import { JobsState, SingleJobState } from '../models/states/job.states';
 
 export const initialState: JobsState = {
     jobs: [],
@@ -14,17 +14,7 @@ export const singleJobInitialState: SingleJobState = {
     error: undefined
 }
 
-export interface JobsState {
-    jobs: Job[],
-    loading: boolean,
-    error: Error
-} 
 
-export interface SingleJobState {
-    job: Job,
-    loading: boolean,
-    error: string
-}
 
 
 const _jobsReducer = createReducer(

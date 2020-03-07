@@ -13,7 +13,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { query } from '@angular/animations';
 import { FilestackService } from '@filestack/angular';
-import { AppState } from 'src/app/shared/models/app.state.model';
+import { AppState } from 'src/app/shared/models/states/app.state.model';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { JobState } from 'src/app/shared/reducers/jobs.reducer';
